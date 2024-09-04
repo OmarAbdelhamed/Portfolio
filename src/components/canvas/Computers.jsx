@@ -14,7 +14,6 @@ const Computers = ({ isMobile }) => {
         angle={0.12}
         penumbra={1}
         intensity={1}
-        castShadow
         shadow-mapSize={512}
       />
       <primitive
@@ -42,7 +41,7 @@ const ComputersCanvas = () => {
     return () => {
       mediaQuery.removeEventListener('change', handleMediaQueryChange);
     };
-  });
+  }, []);
   return (
     <Canvas
       frameloop='demand'

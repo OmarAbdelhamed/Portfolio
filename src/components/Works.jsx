@@ -16,10 +16,10 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
-      <Tilt
+      {/* <Tilt
         options={{ max: 35, scale: 1, speed: 450, reverse: true }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
+      > */}
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
@@ -55,7 +55,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      {/* </Tilt> */}
     </motion.div>
   );
 };

@@ -16,7 +16,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+      // variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className=' overflow-x: hidden'
     >
       <Tilt
@@ -73,7 +73,7 @@ const Works = () => {
 
       <div className='w-full flex'>
         <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
+          // variants={fadeIn('', '', 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] overflow-x: hidden'
         >
           Following projects showcases my skills and experience through

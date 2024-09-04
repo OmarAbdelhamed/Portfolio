@@ -17,7 +17,7 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className=' overflow-x: hidden;'
+      className=' overflow-x: hidden'
     >
       <Tilt
         options={{ max: 35, scale: 1, speed: 450, reverse: true }}

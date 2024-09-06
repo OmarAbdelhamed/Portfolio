@@ -39,7 +39,7 @@ const ComputersCanvas = () => {
     };
   }, []);
   return isMobile ? (
-    <img src={pc} alt='pc' className='w-full h-full object-contain' />
+    <img src={pc} alt='pc' className='w-full h-full object-contain pt-[200px]' />
   ) : (
     <Canvas camera={{ position: [20, 3, 5], fov: 25 }}>
       <Suspense fallback={<CanvasLoader />}>

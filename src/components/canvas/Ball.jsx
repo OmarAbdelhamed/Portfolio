@@ -38,7 +38,11 @@ const BallCanvas = ({ icon, index }) => {
       whileInView={'show'}
       variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
     >
-      <Canvas frameloop='always' gl={{ preserveDrawingBuffer: true }}>
+      <Canvas
+        frameloop='always'
+        gl={{ preserveDrawingBuffer: true }}
+        className='overflow-scroll'
+      >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls enableZoom={false} enableRotate={false} />
           <Ball imgUrl={icon} />

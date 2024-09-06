@@ -9,8 +9,7 @@ import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 import { CanvasLoader } from '..';
 import { motion } from 'framer-motion';
-import { textVariant } from '../../utils/motion';
-import { styles } from '../../styles';
+import { fadeIn } from '../../utils/motion';
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   return (
@@ -32,15 +31,21 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon, index }) => {
   return (
-    <Canvas frameloop='always' gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} enableRotate={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <motion.div
+      initial='hidden'
+      whileInView={'show'}
+      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+    >
+      <Canvas frameloop='always' gl={{ preserveDrawingBuffer: true }}>
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} enableRotate={false} />
+          <Ball imgUrl={icon} />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </motion.div>
   );
 };
 export default BallCanvas;

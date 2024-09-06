@@ -27,6 +27,8 @@ import {
   electree,
   electreeev2,
   bravoweb,
+  education,
+  
 } from '../assets';
 
 export const navLinks = [
@@ -116,6 +118,30 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Bachelor of Computer Engineering',
+    company_name: 'Tekirdag namik kemal University',
+    icon: education,
+    iconBg: '#E6DEDD',
+    date: 'Sep 2021 - Present',
+    points: [
+      '4.Year Computer Engineering Student',
+      
+    ],
+  },
+  {
+    title: 'FullStack development Scholarship',
+    company_name: 'Udacity with Egyptian Ministry of technology',
+    icon: education,
+    iconBg: '#E6DEDD',
+    date: 'Aug 2021 - Sep 2022',
+    points: [
+      'I got a NanoDegree in FullStack Development From Udacity.',
+      'It was 3 levels of courses challenger professional and advanced where I learned HTML CSS JavaScript TypeScript & NodeJS with ExpressJS.',
+      'On top of it I learned ReactJS and got a Cross-Skilling Certificate from Udacity as will.',
+      'I got a Total of 4 Courses with a lot of Experiences and projects it was a great experience. ',
+    ],
+  },
+  {
     title: 'Software Developer Intern',
     company_name: 'Pinsoft - IT Solutions',
     icon: pinsoft,
@@ -161,9 +187,9 @@ const experiences = [
     date: 'May 2022 - Present',
     points: [
       'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+      'Gain experience through smaller freelance gigs or personal projects to demonstrate your problem-solving abilities.',
       'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Develop excellent communication and client management skills to build trust and maintain long-term relationships.',
     ],
   },
 ];

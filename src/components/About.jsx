@@ -37,13 +37,19 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        variants={textVariant()}
+        initial='hidden'
+        whileInView={'show'}
+      >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
+        initial='hidden'
+        whileInView={'show'}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm a skilled software developer with experience in TypeScript and
@@ -52,14 +58,15 @@ const About = () => {
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
-
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
+      <motion.div initial='hidden' whileInView={'show'}>
+        <div className='mt-20 flex flex-wrap gap-10'>
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </div>
+      </motion.div>
     </>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, 'about');

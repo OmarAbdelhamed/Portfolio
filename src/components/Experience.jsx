@@ -51,9 +51,9 @@ const ExperienceCard = ({ experience }) => (
 const Experience = () => {
   return (
     <>
-      <motion.div>
+      <motion.div initial='hidden' whileInView={'show'}>
         <p className={styles.sectionSubText}>What I have done So Far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <h2 className={styles.sectionHeadText}>My Experience.</h2>
       </motion.div>
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>

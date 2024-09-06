@@ -71,7 +71,11 @@ const ProjectCard = ({
       </div>
     </Tilt>
   ) : (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div
+      initial='hidden'
+      whileInView={'show'}
+      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+    >
       <Tilt
         options={{ max: 35, scale: 1, speed: 450, reverse: true }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
@@ -135,7 +139,7 @@ const Works = () => {
 
   return (
     <>
-      <motion.div>
+      <motion.div initial='hidden' whileInView={'show'}>
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>

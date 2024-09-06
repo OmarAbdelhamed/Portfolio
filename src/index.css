@@ -20,16 +20,29 @@
 }
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
+  background: #202020; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
     #434343,
-    #000000
+    #202020
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #434343,
-    #000000
+    #202020
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.gray-gradient {
+  background: #484848; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #222222,
+    #484848
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #222222,
+    #484848
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

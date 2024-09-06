@@ -46,17 +46,28 @@ const Feedbacks = () => {
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px}`}
       >
-        <motion.div variants={textVariant()}>
+        <motion.div
+          variants={textVariant()}
+          initial='hidden'
+          whileInView={'show'}
+        >
           <p className={`${styles.sectionSubText}`}>What people Says</p>
           <h2 className={`${styles.sectionHeadText}`}>Testimonials</h2>
         </motion.div>
       </div>
-
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 flex justify-center`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} {...testimonial} index={index} />
-        ))}
-      </div>
+      <motion.div initial='hidden' whileInView={'show'}>
+        <div
+          className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 justify-center`}
+        >
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard
+              key={testimonial.name}
+              {...testimonial}
+              index={index}
+            />
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };

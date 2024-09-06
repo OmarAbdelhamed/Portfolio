@@ -9,6 +9,7 @@ import close from './close.svg';
 import education from './Education.png';
 import linkedin from './linkedin.png';
 import upworkicon from './uprworkicon.png';
+import pc from './pc.png';
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
@@ -73,4 +74,5 @@ export {
   education,
   upworkicon,
   linkedin,
+  pc,
 };

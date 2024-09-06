@@ -21,10 +21,7 @@ const Ball = (props) => {
       <directionalLight position={[-1, 0, 0]} />
       <mesh scale={2.3}>
         <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial
-          color='#fff8eb'
-          flatShading
-        />
+        <meshStandardMaterial color='#fff8eb' flatShading />
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
@@ -39,26 +36,9 @@ const Ball = (props) => {
           map={decal}
           flatShading
         />
-        <Decal
-          position={[1, 0, 0]}
-          scale={1}
-          map={decal}
-          flatShading
-        />
-        <Decal
-          position={[-1, 0, 0]}
-          scale={1}
-          map={decal}
-          flatShading
-        />
-
-        <Decal
-          position={[1, 0, 0]}
-          // rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1}
-          map={decal}
-          flatShading
-        />
+        <Decal position={[1, 0, 0]} scale={1} map={decal} flatShading />
+        <Decal position={[-1, 0, 0]} scale={1} map={decal} flatShading />
+        <Decal position={[1, 0, 0]} scale={1} map={decal} flatShading />
       </mesh>
     </Float>
   );

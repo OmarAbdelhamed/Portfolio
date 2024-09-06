@@ -44,7 +44,6 @@ const BallCanvas = ({ icon, index }) => {
         className='overflow-scroll'
       >
         <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} enableRotate={false} />
           <Ball imgUrl={icon} />
         </Suspense>
         <Preload all />

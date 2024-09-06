@@ -4,11 +4,11 @@ import { Float, OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { CanvasLoader } from '..';
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf');
+  const computer = useGLTF('./desktop_pc/scene-opt.glb');
   return (
     <>
       <Float speed={1} rotationIntensity={1} floatIntensity={1}>
-        <hemisphereLight intensity={2} groundColor='black' />
+        <hemisphereLight intensity={6} groundColor='black' />
         <pointLight intensity={3} />
         <primitive
           object={computer.scene}

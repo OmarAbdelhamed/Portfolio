@@ -13,8 +13,8 @@ const Computers = ({ isMobile }) => {
         <pointLight intensity={3} />
         <primitive
           object={computer.scene}
-          scale={isMobile ? 0.5 : 0.75}
-          position={isMobile ? [0, -2, -1.5] : [0, -2, -1.5]}
+          scale={0.75}
+          position={[0, -2, -1.5]}
           rotation={[-0.01, -0.2, -0.1]}
         />
       </Float>
@@ -26,7 +26,7 @@ const ComputersCanvas = () => {
   const [isMobile, setMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 800px)');
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
 
     setMobile(mediaQuery.matches);
 
@@ -39,7 +39,11 @@ const ComputersCanvas = () => {
     };
   }, []);
   return isMobile ? (
-    <img src={pc} alt='pc' className='w-full h-full object-contain pt-[200px]' />
+    <img
+      src={pc}
+      alt='pc'
+      className='w-full h-full object-contain pt-[200px]'
+    />
   ) : (
     <Canvas camera={{ position: [20, 3, 5], fov: 25 }}>
       <Suspense fallback={<CanvasLoader />}>

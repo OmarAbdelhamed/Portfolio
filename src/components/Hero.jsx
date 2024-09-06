@@ -25,7 +25,9 @@ const Hero = () => {
           <div className='flex flex-row items-center mt-3'>
             <div className=' inset-0 flex justify-end m-3 card-img_hover'>
               <div
-                onClick={() => window.open('https://github.com/OmarAbdelhamed', '_blank')}
+                onClick={() =>
+                  window.open('https://github.com/OmarAbdelhamed', '_blank')
+                }
                 className='black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer'
               >
                 <img
@@ -54,7 +56,12 @@ const Hero = () => {
             </div>
             <div className=' inset-0 flex justify-end m-3 card-img_hover'>
               <div
-                onClick={() => window.open('https://www.upwork.com/freelancers/~0161e28e4f2f904b8c', '_blank')}
+                onClick={() =>
+                  window.open(
+                    'https://www.upwork.com/freelancers/~0161e28e4f2f904b8c',
+                    '_blank'
+                  )
+                }
                 className='gray-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer'
               >
                 <img
@@ -86,5 +93,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;

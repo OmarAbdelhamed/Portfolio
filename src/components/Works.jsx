@@ -72,9 +72,7 @@ const ProjectCard = ({
     </Tilt>
   ) : (
     <motion.div
-      initial='hidden'
-      whileInView={'show'}
-      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+      variants={fadeIn('up', 'spring', index * 0.3, 0.75)}
     >
       <Tilt
         options={{ max: 35, scale: 1, speed: 450, reverse: true }}

@@ -34,8 +34,6 @@ const Ball = (props) => {
 const BallCanvas = ({ icon, index }) => {
   return (
     <motion.div
-      initial='hidden'
-      whileInView={'show'}
       variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
     >
       <Canvas

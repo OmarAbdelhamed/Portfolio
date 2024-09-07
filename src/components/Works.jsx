@@ -139,7 +139,7 @@ const Works = () => {
 
   return (
     <>
-      <motion.div initial='hidden' whileInView={'show'}>
+      <motion.div>
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>

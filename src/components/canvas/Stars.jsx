@@ -1,12 +1,20 @@
 import { PointMaterial, Points, Preload } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Suspense, useRef, useState } from 'react';
+import { Suspense, useRef } from 'react';
 
 import * as random from 'maath/random/dist/maath-random.esm';
+
 const Stars = (props) => {
   const ref = useRef();
 
-  const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+  const sphere = random.inSphere(new Float32Array(6000), { radius: 1.2 });
+
+  for (let i = 0; i < sphere.length; i++) {
+    if (!isFinite(sphere[i])) {
+      console.error(`NaN found at index ${i}`, sphere[i]);
+      sphere[i] = 0; // Set to a default valid number
+    }
+  }
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 60;
@@ -35,7 +43,6 @@ const StarsCanvas = () => {
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
-
         <Preload all />
       </Canvas>
     </div>

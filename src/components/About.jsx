@@ -52,11 +52,16 @@ const About = () => {
         whileInView={'show'}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScriptL and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I am a junior Computer Engineering student with a growing expertise in
+        AI, deep learning, and software development. Passionate about leveraging
+        technologies like Python, JavaScript, and frameworks like React and
+        Node.js, I enjoy tackling real-world challenges through innovative
+        solutions. My experience includes building AI models using PyTorch,
+        developing web applications, and exploring embedded systems. Always
+        eager to learn, I strive to combine my knowledge in software development
+        and AI to create efficient, scalable, and user-friendly applications.
+        Let's collaborate to bring your ideas to life and explore the potential
+        of AI-driven solutions!
       </motion.p>
       <motion.div initial='hidden' whileInView={'show'}>
         <div className='mt-20 flex flex-wrap gap-10'>

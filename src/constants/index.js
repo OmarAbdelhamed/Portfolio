@@ -124,7 +124,7 @@ const experiences = [
     iconBg: '#E6DEDD',
     date: 'Sep 2021 - Present',
     points: [
-      '4.Year Computer Engineering Student',
+      'Fresh Graduate Computer Engineering Student',
       
     ],
   },
@@ -149,8 +149,8 @@ const experiences = [
     date: 'Jul 2023 - Oct 2023',
     points: [
       'My internship experience was exceptionally enriching, marked by the successful completion of three distinct projects.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
+      'Developed and maintained responsive web and mobile applications using React.js and React Native, optimizing for maximum speed and scalability',
+      'Collaborated with backend developers to integrate RESTful APIs, improving application performance by 40% and reducing API response times by 25%',
       'The overall experience not only allowed me to deepen my technical skills but also exposed me to a diverse range of professionals, each contributing their unique insights and expertise. ',
     ],
   },
@@ -162,9 +162,9 @@ const experiences = [
     date: 'Aug 2023 - Oct 2023',
     points: [
       'Successfully completed multiple data annotation projects, enhancing the precision and effectiveness of machine learning models.',
-      'Collaborated closely with data scientists, engineers, and project managers to ensure that annotations were aligned with specific algorithmic requirements.',
-      'Gained in-depth experience with various annotation tools and platforms, optimizing the annotation process for speed and accuracy.',
-      'Worked on refining data labeling strategies, which led to improved model training and validation.',
+      'Annotated 10,000+ Arabic audio files, improving the accuracy of NLP models by 15%.',
+      'Collaborated with a team of annotators and linguists, maintaining 95% consistency in annotations and achieving a 98% accuracy rate.',
+      'Recognized as the "Best Annotator" for exceptional accuracy and consistency, receiving a formal certificate of achievement.',
     ],
   },
   {
@@ -174,7 +174,7 @@ const experiences = [
     iconBg: '#E6DEDD',
     date: 'Jan 2022 - Jan 2023',
     points: [
-      'Developing and maintaining the website using Web technologies',
+      'Developing and maintaining the website using Web technologies as a Freelancer',
       'Implementing responsive design and ensuring cross-browser compatibility.',
       'Participating in code reviews and providing constructive feedback to other developers.',
     ],

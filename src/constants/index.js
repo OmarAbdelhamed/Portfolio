@@ -122,9 +122,9 @@ const experiences = [
     company_name: 'Tekirdag namik kemal University',
     icon: education,
     iconBg: '#E6DEDD',
-    date: 'Sep 2021 - Present',
+    date: 'Sep 2021 - Jun 2025',
     points: [
-      'Fresh Graduate Computer Engineering Student',
+      'Fresh Graduate Computer Engineer',
       
     ],
   },

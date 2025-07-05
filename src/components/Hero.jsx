@@ -20,7 +20,7 @@ const Hero = () => {
           <p className='{`${styles.heroSubText} mt-2 text-white-100`}'>
           I'm a Deep Learning Engineer building intelligent web and mobile applications
             <br className='sm:block hidden' />
-            by fusing AI models with modern development technologies.
+            by fusing AI models with modern development technologies
           </p>
           <div className='flex flex-row items-center mt-3'>
             <div className=' inset-0 flex justify-end m-3 card-img_hover'>

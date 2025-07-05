@@ -29,6 +29,9 @@ import {
   bravoweb,
   education,
   meriem,
+  cv,
+  retinal,
+  imagecaptioning,
 } from '../assets';
 
 export const navLinks = [
@@ -44,23 +47,27 @@ export const navLinks = [
     id: 'contact',
     title: 'Contact',
   },
+  {
+    id: 'cv',
+    title: 'CV',
+  },
 ];
 
 const services = [
   {
-    title: 'Software Developer',
+    title: 'Software Development',
     icon: web,
   },
   {
-    title: 'React & React Native Developer',
+    title: 'React & React Native Development',
     icon: mobile,
   },
   {
-    title: 'Backend Developer',
+    title: 'Backend Development',
     icon: backend,
   },
   {
-    title: 'Graphic Designer',
+    title: 'Ml & DL Engineering',
     icon: creator,
   },
 ];
@@ -123,9 +130,9 @@ const experiences = [
     icon: education,
     iconBg: '#E6DEDD',
     date: 'Sep 2021 - Jun 2025',
-    points: [
-      'Fresh Graduate Computer Engineer',
-      
+    points: ['Fresh Graduate Computer Engineer',
+      '1. Capstone: Retinal Vessel Segmentation Using U-Net, Attention U-Net, and Spatial Attention U-Net: Developed and compared deeplearning models for retinal vessel segmentation, achieving a 97% accuracy rate with Attention U-Net.',
+      '2. Capstone: Image captioning project CNN-LSTM with Attention VS Transformer VIT-GPT2 comparison: Developed and TrainedCNN-LSTM with Attention model from scratch and compared it with the new in field Transformer models',
     ],
   },
   {
@@ -226,7 +233,7 @@ const projects = [
     ],
     image: flybilet,
     source_code_link: 'https://github.com/OmarAbdelhamed/pinsoft-fly-app',
-    live_link: 'https://pinsoft-fly-app-wine.vercel.app/'
+    live_link: 'https://pinsoft-fly-app-wine.vercel.app/',
   },
   {
     name: 'Electree',
@@ -244,7 +251,7 @@ const projects = [
     ],
     image: electree,
     source_code_link: 'https://github.com/OmarAbdelhamed/electree-upwork',
-    live_link: 'https://electree-upwork.vercel.app/'
+    live_link: 'https://electree-upwork.vercel.app/',
   },
   {
     name: 'Anon Online Store',
@@ -262,7 +269,7 @@ const projects = [
     ],
     image: ecommerce2,
     source_code_link: 'https://github.com/OmarAbdelhamed/Anon',
-    live_link: 'https://ecommerceses.netlify.app/'
+    live_link: 'https://ecommerceses.netlify.app/',
   },
   {
     name: 'Bravo Furniture',
@@ -284,6 +291,7 @@ const projects = [
     ],
     image: bravoweb,
     source_code_link: 'https://bravofurniture.com',
+    live_link: 'https://bravofurniture.com',
   },
   {
     name: 'pet store',
@@ -301,7 +309,7 @@ const projects = [
     ],
     image: dogcat,
     source_code_link: 'https://github.com/OmarAbdelhamed/petStore',
-    live_link: 'https://kittenseses.netlify.app/'
+    live_link: 'https://kittenseses.netlify.app/',
   },
   {
     name: 'PLANTEX',
@@ -343,10 +351,56 @@ const projects = [
       },
     ],
     image: meriem,
-    source_code_link:
-      'https://github.com/OmarAbdelhamed/mariemhattab',
+    source_code_link: 'https://github.com/OmarAbdelhamed/mariemhattab',
     live_link: 'https://www.hattab-meriem.com/',
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const AiProjects = [
+  {
+    name: 'Retinal Vessel Segmentation',
+    description:
+      'Developed and compared advanced U-Net models with attention mechanisms (Att-UNet & SA-UNet) for accurate blood vessel segmentation in retinal images, achieving up to 97% accuracy on benchmark datasets like DRIVE, STARE, and CHASE-DB1.',
+    tags: [
+      {
+        name: 'Deep Learning',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Medical Imaging',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'U-Net',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: retinal, 
+    source_code_link: 'https://github.com/OmarAbdelhamed/Compartment-between-attention-based-Unet-Models',
+    demo_link: '', // Optional: add a hosted version or paper link if available
+  },
+  {
+    name: 'Image Captioning with Attention and Transformers',
+    description:
+      'Built and evaluated two models for automatic image description: a custom CNN-LSTM with attention and a ViT-GPT2 Transformer model, using the MS COCO dataset. Gained insights into trade-offs between speed and accuracy in multimodal AI.',
+    tags: [
+      {
+        name: 'Deep Learning',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Computer Vision',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Transformers',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image:  imagecaptioning, // Replace with your actual image path
+    source_code_link: 'https://github.com/omar792001/image-captioning-transformers', // Replace with your GitHub link
+    demo_link: '', // Optional: add a demo video or notebook viewer if available
+  },
+];
+
+export { services, technologies, experiences, testimonials, projects, cv, AiProjects };

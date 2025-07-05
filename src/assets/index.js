@@ -10,6 +10,11 @@ import education from './Education.png';
 import linkedin from './linkedin.png';
 import upworkicon from './uprworkicon.png';
 import pc from './pc.png';
+import meriem from './meriem.png';
+import cv from './Omar abdelhamed.pdf';
+import live from './live.png';
+import retinal from './retinal.png';
+import imagecaptioning from './image captioning.jpg';
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
@@ -75,4 +80,9 @@ export {
   upworkicon,
   linkedin,
   pc,
+  meriem,
+  cv,
+  live,
+  retinal,
+  imagecaptioning,
 };

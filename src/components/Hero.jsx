@@ -18,9 +18,9 @@ const Hero = () => {
             Hi, I'm <span className='text-[#d80024]'>Omar</span>
           </h1>
           <p className='{`${styles.heroSubText} mt-2 text-white-100`}'>
-            I develop 3d visual websites, user
+          I'm a Deep Learning Engineer building intelligent web and mobile applications
             <br className='sm:block hidden' />
-            interfaces web & mobile applications
+            by fusing AI models with modern development technologies.
           </p>
           <div className='flex flex-row items-center mt-3'>
             <div className=' inset-0 flex justify-end m-3 card-img_hover'>

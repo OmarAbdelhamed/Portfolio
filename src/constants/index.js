@@ -226,6 +226,7 @@ const projects = [
     ],
     image: flybilet,
     source_code_link: 'https://github.com/OmarAbdelhamed/pinsoft-fly-app',
+    live_link: 'https://pinsoft-fly-app-wine.vercel.app/'
   },
   {
     name: 'Electree',
@@ -243,6 +244,7 @@ const projects = [
     ],
     image: electree,
     source_code_link: 'https://github.com/OmarAbdelhamed/electree-upwork',
+    live_link: 'https://electree-upwork.vercel.app/'
   },
   {
     name: 'Anon Online Store',
@@ -260,6 +262,7 @@ const projects = [
     ],
     image: ecommerce2,
     source_code_link: 'https://github.com/OmarAbdelhamed/Anon',
+    live_link: 'https://ecommerceses.netlify.app/'
   },
   {
     name: 'Bravo Furniture',
@@ -280,7 +283,7 @@ const projects = [
       },
     ],
     image: bravoweb,
-    source_code_link: 'https://bravofurniture.com.tr',
+    source_code_link: 'https://bravofurniture.com',
   },
   {
     name: 'pet store',
@@ -298,6 +301,7 @@ const projects = [
     ],
     image: dogcat,
     source_code_link: 'https://github.com/OmarAbdelhamed/petStore',
+    live_link: 'https://kittenseses.netlify.app/'
   },
   {
     name: 'PLANTEX',
@@ -319,27 +323,29 @@ const projects = [
     image: innowareai,
     source_code_link:
       'https://github.com/OmarAbdelhamed/Plants-Store?tab=readme-ov-file',
+    live_link: 'https://plantsst.netlify.app/',
   },
   {
-    name: 'Electree V2',
-    description:
-      'Web application that shows the services and the history of electric provider company.',
+    name: 'Meriem hattab',
+    description: 'a website for a psychologist',
     tags: [
       {
-        name: 'Html',
+        name: 'React JS',
         color: 'blue-text-gradient',
       },
       {
-        name: 'SCSS',
+        name: 'Tailwind CSS',
         color: 'pink-text-gradient',
       },
       {
-        name: 'JavaScript',
+        name: 'Hosting',
         color: 'pink-text-gradient',
       },
     ],
-    image: electreeev2,
-    source_code_link: 'https://github.com/OmarAbdelhamed/electree-v2',
+    image: innowareai,
+    source_code_link:
+      'https://github.com/OmarAbdelhamed/mariemhattab',
+    live_link: 'https://www.hattab-meriem.com/',
   },
 ];
 

@@ -28,7 +28,7 @@ import {
   electreeev2,
   bravoweb,
   education,
-  
+  meriem,
 } from '../assets';
 
 export const navLinks = [
@@ -342,7 +342,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: innowareai,
+    image: meriem,
     source_code_link:
       'https://github.com/OmarAbdelhamed/mariemhattab',
     live_link: 'https://www.hattab-meriem.com/',

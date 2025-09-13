@@ -52,7 +52,7 @@ const About = () => {
         whileInView={'show'}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I am a junior Computer Engineering student with a growing expertise in
+        I am a Computer Engineer with a growing expertise in
         AI, deep learning, and software development. Passionate about leveraging
         technologies like Python, JavaScript, and frameworks like React and
         Node.js, I enjoy tackling real-world challenges through innovative

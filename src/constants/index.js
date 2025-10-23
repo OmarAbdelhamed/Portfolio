@@ -181,7 +181,7 @@ const experiences = [
     company_name: 'NanoSoft',
     icon: reactjs,
     iconBg: '#E6DEDD',
-    date: 'Feb 2025 - Aug 2024',
+    date: 'Feb 2024 - Aug 2024',
     points: [
       'Developed and delivered custom web and mobile applications for various clients.',
       'Utilized React and Redux for state management in complex applications.',
@@ -195,7 +195,7 @@ const experiences = [
     company_name: 'UpWork',
     icon: upwork,
     iconBg: '#E6DEDD',
-    date: 'May 2022 - Present',
+    date: 'May 2023 - Present',
     points: [
       'Developing and maintaining web applications using React.js and other related technologies.',
       'Gain experience through smaller freelance gigs or personal projects to demonstrate your problem-solving abilities.',

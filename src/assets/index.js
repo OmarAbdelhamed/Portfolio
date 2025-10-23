@@ -43,6 +43,7 @@ import innowareai from './innowareai.jpg';
 import simplecart from './simple cart.jpg';
 import electreeev2 from './electreeev2.jpg';
 import dashboard from './dashboard.png'
+import beyond from './beyond.png'
 
 export {
   logo,
@@ -87,4 +88,5 @@ export {
   retinal,
   imagecaptioning,
   dashboard,
+  beyond,
 };

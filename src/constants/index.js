@@ -32,7 +32,8 @@ import {
   cv,
   retinal,
   imagecaptioning,
-  dashboard
+  dashboard,
+  beyond
 } from '../assets';
 
 export const navLinks = [
@@ -238,6 +239,28 @@ const projects = [
     image: dashboard,
     source_code_link: 'https://github.com/OmarAbdelhamed/admin-dashboard-react',
     live_link: 'https://admin-dashboard-react-lemon.vercel.app/',
+  },
+  {
+    name: 'Beyond figma web design and code',
+    description:
+      'Web-based dashboard for data analyzing.',
+    tags: [
+      {
+        name: 'Design',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Figma',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'ReactJs',
+        color: 'Pink-text-gradient',
+      },
+    ],
+    image: beyond,
+    source_code_link: 'https://github.com/OmarAbdelhamed/beynod_test-main',
+    live_link: 'https://www.figma.com/design/zFpEvP4XrEa6vMVWcszabH/Beyond-Website---Arabic--Copy-?node-id=0-1&t=KVdRoQ05OsvvzcU1-1',
   },
   {
     name: 'FlyBilet',

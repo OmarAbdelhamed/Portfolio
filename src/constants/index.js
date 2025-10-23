@@ -130,7 +130,7 @@ const experiences = [
     company_name: 'Tekirdag namik kemal University',
     icon: education,
     iconBg: '#E6DEDD',
-    date: 'Sep 2021 - Jun 2025',
+    date: 'Sep 2021 - Jul 2025',
     points: [
       'Fresh Graduate Computer Engineer',
       '1. Capstone: Retinal Vessel Segmentation Using U-Net, Attention U-Net, and Spatial Attention U-Net: Developed and compared deeplearning models for retinal vessel segmentation, achieving a 97% accuracy rate with Attention U-Net.',
@@ -142,7 +142,7 @@ const experiences = [
     company_name: 'Udacity with Egyptian Ministry of technology',
     icon: education,
     iconBg: '#E6DEDD',
-    date: 'Aug 2021 - Sep 2022',
+    date: 'jul 2021 - Sep 2022',
     points: [
       'I got a NanoDegree in FullStack Development From Udacity.',
       'It was 3 levels of courses challenger professional and advanced where I learned HTML CSS JavaScript TypeScript & NodeJS with ExpressJS.',

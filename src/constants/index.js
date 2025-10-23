@@ -32,6 +32,7 @@ import {
   cv,
   retinal,
   imagecaptioning,
+  dashboard
 } from '../assets';
 
 export const navLinks = [
@@ -130,7 +131,8 @@ const experiences = [
     icon: education,
     iconBg: '#E6DEDD',
     date: 'Sep 2021 - Jun 2025',
-    points: ['Fresh Graduate Computer Engineer',
+    points: [
+      'Fresh Graduate Computer Engineer',
       '1. Capstone: Retinal Vessel Segmentation Using U-Net, Attention U-Net, and Spatial Attention U-Net: Developed and compared deeplearning models for retinal vessel segmentation, achieving a 97% accuracy rate with Attention U-Net.',
       '2. Capstone: Image captioning project CNN-LSTM with Attention VS Transformer VIT-GPT2 comparison: Developed and TrainedCNN-LSTM with Attention model from scratch and compared it with the new in field Transformer models',
     ],
@@ -175,19 +177,21 @@ const experiences = [
     ],
   },
   {
-    title: 'Web Developer',
-    company_name: 'Bravo furniture',
-    icon: bravo,
+    title: 'Full-Stack Developer',
+    company_name: 'NanoSoft',
+    icon: reactjs,
     iconBg: '#E6DEDD',
-    date: 'Jan 2022 - Jan 2023',
+    date: 'Feb 2025 - Aug 2024',
     points: [
-      'Developing and maintaining the website using Web technologies as a Freelancer',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Developed and delivered custom web and mobile applications for various clients.',
+      'Utilized React and Redux for state management in complex applications.',
+      'Focused on high-quality code and user-centric design.',
+      'Managed multiple projects simultaneously, including eCommerce platforms and mobile apps.',
+      'Maintained effective communication and ensured timely delivery.',
     ],
   },
   {
-    title: 'Ful-Stack Developer',
+    title: 'Ful-Stack Freelancer',
     company_name: 'UpWork',
     icon: upwork,
     iconBg: '#E6DEDD',
@@ -214,6 +218,28 @@ const testimonials = [
 
 const projects = [
   {
+    name: 'Admin Dashboard',
+    description:
+      'Web-based dashboard for data analyzing.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Material Ui',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: dashboard,
+    source_code_link: 'https://github.com/OmarAbdelhamed/admin-dashboard-react',
+    live_link: 'https://admin-dashboard-react-lemon.vercel.app/',
+  },
+  {
     name: 'FlyBilet',
     description:
       'Web-based platform that allows users to search, book, and manage plane tickets from various providers, providing a convenient and efficient solution for transportation needs.',
@@ -223,7 +249,7 @@ const projects = [
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'NodeJs',
         color: 'green-text-gradient',
       },
       {
@@ -375,8 +401,9 @@ const AiProjects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: retinal, 
-    source_code_link: 'https://github.com/OmarAbdelhamed/Compartment-between-attention-based-Unet-Models',
+    image: retinal,
+    source_code_link:
+      'https://github.com/OmarAbdelhamed/Compartment-between-attention-based-Unet-Models',
     demo_link: '', // Optional: add a hosted version or paper link if available
   },
   {
@@ -397,10 +424,19 @@ const AiProjects = [
         color: 'pink-text-gradient',
       },
     ],
-    image:  imagecaptioning, // Replace with your actual image path
-    source_code_link: 'https://github.com/omar792001/image-captioning-transformers', // Replace with your GitHub link
+    image: imagecaptioning, // Replace with your actual image path
+    source_code_link:
+      'https://github.com/omar792001/image-captioning-transformers', // Replace with your GitHub link
     demo_link: '', // Optional: add a demo video or notebook viewer if available
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, cv, AiProjects };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  cv,
+  AiProjects,
+};

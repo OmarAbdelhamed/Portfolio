@@ -42,6 +42,7 @@ import electree from './electree.png';
 import innowareai from './innowareai.jpg';
 import simplecart from './simple cart.jpg';
 import electreeev2 from './electreeev2.jpg';
+import dashboard from './dashboard.png'
 
 export {
   logo,
@@ -85,4 +86,5 @@ export {
   live,
   retinal,
   imagecaptioning,
+  dashboard,
 };

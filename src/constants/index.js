@@ -255,7 +255,7 @@ const projects = [
       },
       {
         name: 'ReactJs',
-        color: 'Pink-text-gradient',
+        color: 'pink-text-gradient',
       },
     ],
     image: beyond,

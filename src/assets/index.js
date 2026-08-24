@@ -15,6 +15,7 @@ import cv from './Omar abdelhamed.pdf';
 import live from './live.png';
 import retinal from './retinal.png';
 import imagecaptioning from './image captioning.jpg';
+import me from './Me.png';
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
@@ -87,6 +88,7 @@ export {
   live,
   retinal,
   imagecaptioning,
+  me,
   dashboard,
   beyond,
 };

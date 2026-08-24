@@ -32,6 +32,7 @@ import {
   cv,
   retinal,
   imagecaptioning,
+  me,
   dashboard,
   beyond
 } from '../assets';
@@ -196,12 +197,24 @@ const experiences = [
     company_name: 'UpWork',
     icon: upwork,
     iconBg: '#E6DEDD',
-    date: 'May 2023 - Present',
+    date: 'May 2023 - 2025',
     points: [
       'Developing and maintaining web applications using React.js and other related technologies.',
       'Gain experience through smaller freelance gigs or personal projects to demonstrate your problem-solving abilities.',
       'Implementing responsive design and ensuring cross-browser compatibility.',
       'Develop excellent communication and client management skills to build trust and maintain long-term relationships.',
+    ],
+  },
+  {
+    title: 'AI & Machine Learning Engineer',
+    company_name: 'Bee2 AI',
+    icon: '/bee2_ai_logo.jpg',
+    iconBg: '#FFFFFF',
+    date: '2026 - Present',
+    points: [
+      'Owned the AI and end-to-end mobile development of TOFY Go, a TOEFL-aligned English learning app for learners aged 8 and above.',
+      'Integrated AI to analyze students\' voices, evaluate pronunciation and phonetics, convert speech to text, and use LLMs to assess whether their answers are correct.',
+      'Designed the complete mobile UI in Figma and implemented it with React Native and Expo, including learning activities, games, rewards, and progress tracking.',
     ],
   },
 ];
@@ -218,6 +231,29 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: 'TOFY Go! Mobile App',
+    description:
+      'Designed the complete TOFY Go mobile experience in Figma and implemented it end to end with React Native and Expo while working at Bee2 AI. Built child-friendly learning flows, educational games, rewards, and progress tracking for TOEFL-aligned English practice.',
+    tags: [
+      {
+        name: 'Figma',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'React Native',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Expo',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: me,
+    source_code_link: '',
+    live_link:
+      'https://play.google.com/store/apps/details?id=com.godotgodo.client&hl=en',
+  },
   {
     name: 'Admin Dashboard',
     description:
@@ -406,6 +442,30 @@ const projects = [
 ];
 
 const AiProjects = [
+  {
+    name: 'TOFY Go!',
+    description:
+      'Built and integrated TOFY Go\'s AI pipeline while working at Bee2 AI. It analyzes students\' voices, evaluates pronunciation and phonetics, converts speech to text, and uses LLMs to assess their answers for correctness.',
+    tags: [
+      {
+        name: 'Speech AI',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Speech-to-Text',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'LLMs',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: me,
+    source_code_link: '',
+    project_link: 'https://www.tofygo.com/',
+    demo_link:
+      'https://play.google.com/store/apps/details?id=com.godotgodo.client&hl=en',
+  },
   {
     name: 'Retinal Vessel Segmentation',
     description:

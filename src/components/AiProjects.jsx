@@ -15,6 +15,7 @@ const AiProjectCard = ({
   tags,
   image,
   source_code_link,
+  project_link,
   demo_link,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -47,9 +48,23 @@ const AiProjectCard = ({
         />
         <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
           <div className='flex flex-col gap-2'>
+            {project_link && (
+              <div
+                onClick={() => window.open(project_link, '_blank')}
+                title='Visit project website'
+                className='w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-white opacity-80'
+              >
+                <img
+                  src={live}
+                  alt='project website'
+                  className='w-[30px] h-[30px] object-contain opacity-100'
+                />
+              </div>
+            )}
             {demo_link && (
               <div
                 onClick={() => window.open(demo_link, '_blank')}
+                title='Open live app'
                 className='w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-white opacity-80'
               >
                 <img
@@ -59,16 +74,19 @@ const AiProjectCard = ({
                 />
               </div>
             )}
-            <div
-              onClick={() => window.open(source_code_link, '_blank')}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='github'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, '_blank')}
+                title='View source code'
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              >
+                <img
+                  src={github}
+                  alt='github'
+                  className='w-1/2 h-1/2 object-contain'
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -100,9 +118,23 @@ const AiProjectCard = ({
           />
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div className='flex flex-col gap-2'>
+              {project_link && (
+                <div
+                  onClick={() => window.open(project_link, '_blank')}
+                  title='Visit project website'
+                  className='w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-white opacity-80'
+                >
+                  <img
+                    src={live}
+                    alt='project website'
+                    className='w-[30px] h-[30px] object-contain opacity-100'
+                  />
+                </div>
+              )}
               {demo_link && (
                 <div
                   onClick={() => window.open(demo_link, '_blank')}
+                  title='Open live app'
                   className='w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-white opacity-80'
                 >
                   <img
@@ -112,16 +144,19 @@ const AiProjectCard = ({
                   />
                 </div>
               )}
-              <div
-                onClick={() => window.open(source_code_link, '_blank')}
-                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-              >
-                <img
-                  src={github}
-                  alt='github'
-                  className='w-1/2 h-1/2 object-contain'
-                />
-              </div>
+              {source_code_link && (
+                <div
+                  onClick={() => window.open(source_code_link, '_blank')}
+                  title='View source code'
+                  className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                >
+                  <img
+                    src={github}
+                    alt='github'
+                    className='w-1/2 h-1/2 object-contain'
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

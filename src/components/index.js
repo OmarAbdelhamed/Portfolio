@@ -1,35 +1,29 @@
-import {
-  EarthCanvas,
-  BallCanvas,
-  ComputersCanvas,
-  StarsCanvas,
-} from './canvas';
-import Hero from './Hero';
 import Navbar from './Navbar';
-import About from './About';
-import Tech from './Tech';
+import Hero from './Hero';
+import Intro from './Intro';
+import Services from './Services';
+import Banner from './Banner';
+import ProjectTabs from './ProjectTabs';
+import Stack from './Stack';
 import Experience from './Experience';
-import Works from './Works';
-import Feedbacks from './Feedbacks';
+import Testimonials from './Testimonials';
+import Faq from './Faq';
 import Contact from './Contact';
-import CanvasLoader from './Loader';
+import Footer from './Footer';
 import PDFViewer from './PDFViewer';
-import AiProjects from './AiProjects';
 
 export {
-  Hero,
   Navbar,
-  About,
-  Tech,
+  Hero,
+  Intro,
+  Services,
+  Banner,
+  ProjectTabs,
+  Stack,
   Experience,
-  Works,
-  Feedbacks,
+  Testimonials,
+  Faq,
   Contact,
-  EarthCanvas,
-  BallCanvas,
-  ComputersCanvas,
-  StarsCanvas,
-  CanvasLoader,
+  Footer,
   PDFViewer,
-  AiProjects,
 };

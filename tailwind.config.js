@@ -2,26 +2,29 @@
 /*eslint-env node*/
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx}'],
-  mode: 'jit',
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
       colors: {
-        primary: '#050816',
-        secondary: '#aaa6c3',
-        tertiary: '#151030',
-        'black-100': '#100d25',
-        'black-200': '#090325',
-        'white-100': '#f3f3f3',
+        primary: '#000000',
+        surface: '#050505',
+        intro: '#0b0b0b',
+        accent: '#2b5cff',
+        'accent-hover': '#2748a1',
+        'accent-soft': '#3e5cfb',
+        line: '#ffffff1a',
+        'line-strong': '#ffffff40',
+        muted: '#71717b',
       },
-      boxShadow: {
-        card: '0px 35px 120px -15px #211e35',
+      fontFamily: {
+        heading: ['Tanker', 'Arial', 'sans-serif'],
+        body: ['"Space Grotesk"', 'Arial', 'sans-serif'],
+      },
+      maxWidth: {
+        container: '82rem',
       },
       screens: {
-        xs: '450px',
-      },
-      backgroundImage: {
-        'hero-pattern': "url('/src/assets/herobg.png')",
+        xs: '480px',
       },
     },
   },

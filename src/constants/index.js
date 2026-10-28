@@ -15,17 +15,25 @@ import {
   figma,
   docker,
   threejs,
+  lovable,
+  zapier,
+  gemini,
+  claudecode,
+  notion,
+  evernote,
+  todoist,
+  linear,
+  claude,
+  slack,
+  chatgpt,
+  asana,
   pinsoft,
   huawei,
   upwork,
-  bravo,
   innowareai,
-  simplecart,
   dogcat,
-  flybilet,
   ecommerce2,
   electree,
-  electreeev2,
   bravoweb,
   education,
   meriem,
@@ -33,6 +41,10 @@ import {
   retinal,
   imagecaptioning,
   me,
+  statProjects,
+  statData,
+  statExperience,
+  statSeo,
   dashboard,
   beyond
 } from '../assets';
@@ -43,12 +55,20 @@ export const navLinks = [
     title: 'About',
   },
   {
+    id: 'services',
+    title: 'Services',
+  },
+  {
     id: 'work',
     title: 'Work',
   },
   {
-    id: 'contact',
-    title: 'Contact',
+    id: 'ai',
+    title: 'AI',
+  },
+  {
+    id: 'experience',
+    title: 'Experience',
   },
   {
     id: 'cv',
@@ -56,24 +76,118 @@ export const navLinks = [
   },
 ];
 
+export const socialLinks = [
+  { name: 'GitHub', url: 'https://github.com/OmarAbdelhamed' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/omar-abdelhamed-b85a45221/' },
+  { name: 'Upwork', url: 'https://www.upwork.com/freelancers/~0161e28e4f2f904b8c' },
+];
+
+export const heroStats = [
+  { value: 60, suffix: '+', label: 'Successful Projects', icon: statProjects },
+  { value: 100, suffix: '%', label: 'Data driven designs', icon: statData },
+  { value: 3, suffix: '+', label: 'Years of experience', icon: statExperience },
+  { value: 100, suffix: '%', label: 'SEO Optimised Websites', icon: statSeo },
+];
+
+export const companyLogos = [
+  { name: 'Bee2 AI', logo: '/bee2_ai_logo.jpg' },
+  { name: 'Pinsoft', logo: pinsoft },
+  { name: 'Huawei', logo: huawei },
+  { name: 'Upwork', logo: upwork },
+];
+
 const services = [
   {
     title: 'Software Development',
     icon: web,
+    description:
+      'Fast, responsive web applications built with modern tooling and clean, maintainable code.',
+    points: [
+      'React & Next.js Apps',
+      'Responsive UI',
+      'Performance Tuning',
+      'Cross-Browser Support',
+    ],
   },
   {
     title: 'React & React Native Development',
     icon: mobile,
+    description:
+      'Mobile and web products designed in Figma and shipped end to end, from first screen to store release.',
+    points: [
+      'Figma to Code',
+      'React Native & Expo',
+      'Games & Rewards UX',
+      'Progress Tracking',
+    ],
   },
   {
     title: 'Backend Development',
     icon: backend,
+    description:
+      'APIs and services that keep your product fast and reliable as it grows.',
+    points: [
+      'Node.js & Express',
+      'REST API Integration',
+      'Databases & Auth',
+      'Docker Deployments',
+    ],
   },
   {
-    title: 'Ml & DL Engineering',
+    title: 'ML & DL Engineering',
     icon: creator,
+    description:
+      'AI features that work in production, from speech analysis to computer vision models.',
+    points: [
+      'Speech-to-Text & Pronunciation',
+      'LLM Answer Evaluation',
+      'Computer Vision',
+      'Model Training & Evaluation',
+    ],
   },
 ];
+
+const faqs = {
+  services: [
+    {
+      question: 'What kind of projects do you take on?',
+      answer:
+        'Web apps, mobile apps and AI features. That ranges from company websites and eCommerce stores to full products like TOFY Go, where I owned the mobile app and its AI pipeline.',
+    },
+    {
+      question: 'Can you design as well as build?',
+      answer:
+        'Yes. I design interfaces in Figma and then implement them myself, so the shipped product matches the design.',
+    },
+    {
+      question: 'Do you build mobile apps?',
+      answer:
+        'Yes, with React Native and Expo. I handle everything from the UI to API integration and release.',
+    },
+    {
+      question: 'Can you add AI to an existing product?',
+      answer:
+        'Yes. I have integrated speech-to-text, pronunciation scoring and LLM-based evaluation into production apps, and trained deep learning models for vision tasks.',
+    },
+  ],
+  about: [
+    {
+      question: 'Where are you based?',
+      answer:
+        'I work remotely with clients and teams across different time zones.',
+    },
+    {
+      question: 'What is your background?',
+      answer:
+        'I hold a Bachelor of Computer Engineering and a Udacity Full-Stack NanoDegree. I currently work as an AI & Machine Learning Engineer at Bee2 AI.',
+    },
+    {
+      question: 'How do we get started?',
+      answer:
+        'Send me a message through the contact form with a short description of your project and I will get back to you.',
+    },
+  ],
+};
 
 const technologies = [
   {
@@ -111,6 +225,7 @@ const technologies = [
   {
     name: 'Three JS',
     icon: threejs,
+    invert: true,
   },
   {
     name: 'git',
@@ -126,7 +241,71 @@ const technologies = [
   },
 ];
 
+const integrations = [
+  {
+    name: 'Lovable',
+    icon: lovable,
+  },
+  {
+    name: 'Zapier',
+    icon: zapier,
+  },
+  {
+    name: 'Gemini',
+    icon: gemini,
+  },
+  {
+    name: 'Claude Code',
+    icon: claudecode,
+  },
+  {
+    name: 'Notion',
+    icon: notion,
+  },
+  {
+    name: 'Evernote',
+    icon: evernote,
+  },
+  {
+    name: 'Todoist',
+    icon: todoist,
+  },
+  {
+    name: 'Linear',
+    icon: linear,
+  },
+  {
+    name: 'Claude',
+    icon: claude,
+  },
+  {
+    name: 'Slack',
+    icon: slack,
+  },
+  {
+    name: 'ChatGPT',
+    icon: chatgpt,
+  },
+  {
+    name: 'Asana',
+    icon: asana,
+  },
+];
+
 const experiences = [
+  {
+    title: 'FullStack development Scholarship',
+    company_name: 'Udacity with Egyptian Ministry of technology',
+    icon: education,
+    iconBg: '#E6DEDD',
+    date: 'jul 2021 - Sep 2022',
+    points: [
+      'I got a NanoDegree in FullStack Development From Udacity.',
+      'It was 3 levels of courses challenger professional and advanced where I learned HTML CSS JavaScript TypeScript & NodeJS with ExpressJS.',
+      'On top of it I learned ReactJS and got a Cross-Skilling Certificate from Udacity as will.',
+      'I got a Total of 4 Courses with a lot of Experiences and projects it was a great experience. ',
+    ],
+  },
   {
     title: 'Bachelor of Computer Engineering',
     company_name: 'Tekirdag namik kemal University',
@@ -140,16 +319,16 @@ const experiences = [
     ],
   },
   {
-    title: 'FullStack development Scholarship',
-    company_name: 'Udacity with Egyptian Ministry of technology',
-    icon: education,
+    title: 'Ful-Stack Freelancer',
+    company_name: 'UpWork',
+    icon: upwork,
     iconBg: '#E6DEDD',
-    date: 'jul 2021 - Sep 2022',
+    date: 'May 2023 - 2025',
     points: [
-      'I got a NanoDegree in FullStack Development From Udacity.',
-      'It was 3 levels of courses challenger professional and advanced where I learned HTML CSS JavaScript TypeScript & NodeJS with ExpressJS.',
-      'On top of it I learned ReactJS and got a Cross-Skilling Certificate from Udacity as will.',
-      'I got a Total of 4 Courses with a lot of Experiences and projects it was a great experience. ',
+      'Developing and maintaining web applications using React.js and other related technologies.',
+      'Gain experience through smaller freelance gigs or personal projects to demonstrate your problem-solving abilities.',
+      'Implementing responsive design and ensuring cross-browser compatibility.',
+      'Develop excellent communication and client management skills to build trust and maintain long-term relationships.',
     ],
   },
   {
@@ -190,19 +369,6 @@ const experiences = [
       'Focused on high-quality code and user-centric design.',
       'Managed multiple projects simultaneously, including eCommerce platforms and mobile apps.',
       'Maintained effective communication and ensured timely delivery.',
-    ],
-  },
-  {
-    title: 'Ful-Stack Freelancer',
-    company_name: 'UpWork',
-    icon: upwork,
-    iconBg: '#E6DEDD',
-    date: 'May 2023 - 2025',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Gain experience through smaller freelance gigs or personal projects to demonstrate your problem-solving abilities.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Develop excellent communication and client management skills to build trust and maintain long-term relationships.',
     ],
   },
   {
@@ -251,8 +417,7 @@ const projects = [
     ],
     image: me,
     source_code_link: '',
-    live_link:
-      'https://play.google.com/store/apps/details?id=com.godotgodo.client&hl=en',
+    live_link: 'https://www.tofygo.com/',
   },
   {
     name: 'Admin Dashboard',
@@ -297,28 +462,6 @@ const projects = [
     image: beyond,
     source_code_link: 'https://github.com/OmarAbdelhamed/beynod_test-main',
     live_link: 'https://www.figma.com/design/zFpEvP4XrEa6vMVWcszabH/Beyond-Website---Arabic--Copy-?node-id=0-1&t=KVdRoQ05OsvvzcU1-1',
-  },
-  {
-    name: 'FlyBilet',
-    description:
-      'Web-based platform that allows users to search, book, and manage plane tickets from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'NodeJs',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: flybilet,
-    source_code_link: 'https://github.com/OmarAbdelhamed/pinsoft-fly-app',
-    live_link: 'https://pinsoft-fly-app-wine.vercel.app/',
   },
   {
     name: 'Electree',
@@ -463,8 +606,7 @@ const AiProjects = [
     image: me,
     source_code_link: '',
     project_link: 'https://www.tofygo.com/',
-    demo_link:
-      'https://play.google.com/store/apps/details?id=com.godotgodo.client&hl=en',
+    demo_link: '',
   },
   {
     name: 'Retinal Vessel Segmentation',
@@ -515,8 +657,10 @@ const AiProjects = [
 ];
 
 export {
+  faqs,
   services,
   technologies,
+  integrations,
   experiences,
   testimonials,
   projects,

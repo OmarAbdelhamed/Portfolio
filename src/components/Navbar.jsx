@@ -3,8 +3,11 @@ import { navLinks, cv } from '../constants';
 import PDFViewer from './PDFViewer';
 import { StartButton } from './ui';
 
-const ENTER_AT = 24;
-const EXIT_AT = 4;
+// Lenis eases into the top slowly, so expand a little before reaching 0.
+const ENTER_AT = 48;
+const EXIT_AT = 24;
+// Wait for the pill to widen before the link row fades in.
+const LINKS_DELAY = 450;
 
 const MenuIcon = ({ open }) => (
   <span className='relative block h-3 w-5' aria-hidden='true'>
@@ -25,6 +28,16 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showPDF, setShowPDF] = useState(false);
+  const [showLinks, setShowLinks] = useState(true);
+
+  useEffect(() => {
+    if (scrolled) {
+      setShowLinks(false);
+      return;
+    }
+    const timer = setTimeout(() => setShowLinks(true), LINKS_DELAY);
+    return () => clearTimeout(timer);
+  }, [scrolled]);
 
   useEffect(() => {
     let ticking = false;
@@ -64,24 +77,18 @@ const Navbar = () => {
       <header className='pointer-events-none fixed inset-x-0 top-0 z-50 flex h-16 items-center px-[5%] md:h-[4.875rem]'>
         <div
           className={`nav-pill pointer-events-auto relative mx-auto mt-3 flex w-full items-center justify-between rounded-full py-2 pl-3 pr-2 md:mt-5 ${
-            scrolled ? 'is-scrolled max-w-[22.5rem]' : 'max-w-[1280px]'
+            scrolled ? 'is-scrolled max-w-[31rem]' : 'max-w-[1280px]'
           }`}
         >
           <a href='#top' className='flex items-center gap-2' onClick={() => setMenuOpen(false)}>
             <span className='flex h-7 w-7 items-center justify-center rounded-full bg-white font-heading text-sm text-black'>
               OA
             </span>
-            <span
-              className={`overflow-hidden whitespace-nowrap font-medium transition-all duration-500 ${
-                scrolled ? 'max-w-0 opacity-0' : 'max-w-[12rem] opacity-100'
-              }`}
-            >
-              Omar Abdelhamed
-            </span>
+            <span className='whitespace-nowrap font-medium'>Omar Abdelhamed</span>
           </a>
 
           <nav
-            className={scrolled ? 'hidden' : 'hidden items-center gap-2 lg:flex'}
+            className={showLinks ? 'nav-links-in hidden items-center gap-2 lg:flex' : 'hidden'}
             aria-label='Main'
           >
             {navLinks.map((link) =>
@@ -97,7 +104,7 @@ const Navbar = () => {
             <button
               type='button'
               className={`flex h-10 w-10 items-center justify-center rounded-full ${
-                scrolled ? '' : 'lg:hidden'
+                showLinks ? 'lg:hidden' : ''
               }`}
               aria-expanded={menuOpen}
               aria-label='Toggle menu'

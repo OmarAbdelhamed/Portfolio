@@ -1,28 +1,21 @@
 import emailjs from '@emailjs/browser';
-import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
-import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
-import SectionWrapper from '../hoc';
-import { slideIn } from '../utils/motion';
-// template_jxfnpdj
-//service_2i7v91z
-//p60X4esCLXUWVa7x9
+import { useState } from 'react';
+import { ArrowIcon, Tag } from './ui';
+
+const inputClass =
+  'w-full rounded-lg border border-line bg-surface px-4 py-3 text-white outline-none transition-colors placeholder:text-white/40 focus:border-accent';
+
 const Contact = () => {
-  const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
     email: '',
     message: '',
   });
-  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    // template_jxfnpdj
-    //service_2i7v91z
-    //p60X4esCLXUWVa7x9
+    setStatus('sending');
     emailjs
       .send(
         'service_2i7v91z',
@@ -38,8 +31,7 @@ const Contact = () => {
       )
       .then(
         () => {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          setStatus('sent');
           setForm({
             name: '',
             email: '',
@@ -47,9 +39,8 @@ const Contact = () => {
           });
         },
         (error) => {
-          setLoading(false);
           console.log(error);
-          alert('Something went wrong.');
+          setStatus('error');
         }
       );
   };
@@ -61,70 +52,74 @@ const Contact = () => {
   };
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
-      <motion.div
-        variants={slideIn('left', 'tween', 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
-      >
-        <p className={styles.sectionSubText}>Get in Touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+    <section id='contact' className='section'>
+      <div className='container-x grid grid-cols-1 gap-12 lg:grid-cols-2'>
+        <div data-fade className='flex flex-col items-start gap-6'>
+          <Tag>Start a project</Tag>
+          <h2 className='heading-h2'>Tell me about your project</h2>
+          <p className='muted max-w-md'>
+            Share a few details about what you want to build and I&apos;ll get
+            back to you as soon as possible.
+          </p>
+        </div>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+        <form data-fade onSubmit={handleSubmit} className='card grid grid-cols-1 gap-6 p-6 md:p-8'>
+          <label className='flex flex-col gap-2'>
+            <span>Your name</span>
             <input
               type='text'
               name='name'
+              required
               value={form.name}
               onChange={handleChange}
               placeholder='What is your name?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className={inputClass}
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+          <label className='flex flex-col gap-2'>
+            <span>Your email</span>
             <input
               type='email'
               name='email'
+              required
               value={form.email}
               onChange={handleChange}
-              placeholder='What is your Email?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder='What is your email?'
+              className={inputClass}
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+          <label className='flex flex-col gap-2'>
+            <span>Your message</span>
             <textarea
-              rows={7}
+              rows={6}
               name='message'
+              required
               value={form.message}
               onChange={handleChange}
-              placeholder='What do you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder='What do you want to build?'
+              className={`${inputClass} min-h-[11.25rem]`}
             />
           </label>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? 'Sending...' : 'Send'}
+          <button type='submit' className='btn w-fit' disabled={status === 'sending'}>
+            {status === 'sending' ? 'Sending...' : 'Send message'}
+            <ArrowIcon />
           </button>
-        </form>
-      </motion.div>
 
-      <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <EarthCanvas />
-      </motion.div>
-    </div>
+          {status === 'sent' && (
+            <p className='rounded-lg bg-[#ecfdf3] p-4 text-center text-[#027a48]'>
+              Thank you. I will get back to you as soon as possible.
+            </p>
+          )}
+          {status === 'error' && (
+            <p className='rounded-lg bg-[#fef3f2] p-4 text-center text-[#b42318]'>
+              Something went wrong. Please try again.
+            </p>
+          )}
+        </form>
+      </div>
+    </section>
   );
 };
 
-export default SectionWrapper(Contact, 'contact');
+export default Contact;
